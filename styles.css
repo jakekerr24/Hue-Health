@@ -18,11 +18,22 @@ h4 {
     font-size: 28px;
 }
 
+h5 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 p {
     font-family: 'Lato', sans-serif;
 }
 
 .container {
     padding: 1% 5%;
+}
+
+.line { 
+    border-bottom: 1px solid #ccc; 
+    display: block;
 }
 
