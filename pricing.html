@@ -119,80 +119,56 @@
     </div>
 
     <!-- Description of Performance-Based -->
-
-    <!-- Main 2 -->
     <div class="section has-background-light">
       <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h3>What is Performance-Based Pricing?</h3>
+            <p>Our profits are proportionally linked to how much we save our employer partners. Our base pricing assumes savings up 20% but still provides all of the benefits of the Hue Health ecosystem. We tier our pricing based on the total savings we provide - we only make more if we save you more. Performance-based pricing is adding accountability back into healthcare.</p>
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main 2 -->
+    <div class="section has-background-dark">
+      <div class="container has-text-light">
         <h3>Provide a Better Healthcare Experience for Less</h3>
         <p>We are transparent about our prices because we have nothing to hide</p>
         <div class="line"></div>
       </div>
-      <div class="container">
-
-          <style>
-          .div {
-              display: flex;
-          }
-          .slidecontainer {
-            width: 80%;
-            padding: 5% 10% 5% 10%; 
-          }
-
-          .slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 25px;
-            background: #d3d3d3;
-            outline: none;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
-          }
-
-          .slider:hover {
-            opacity: 1;
-          }
-
-          .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 25px;
-            height: 25px;
-            background: #0196b1;
-            cursor: pointer;
-          }
-
-          .slider::-moz-range-thumb {
-            width: 25px;
-            height: 25px;
-            background: #0196b1;
-            cursor: pointer;
-          }
-          </style>
-          </head>
-          <body>
-
-          <div class="slidecontainer">    
-            <input type="range" min="0" max="200" value="100" class="slider" id="myRange">
-            <h2>Equity: <span id="equity"></span>%</h2>
-            <h2>Hourly: $<span id="hourly"></span>/hr</h2>
-          </div>
+      <div class="container has-text-light">
+        <input type="range" min="0" max="3" value="0" class="slider" id="myRange">
+        <p>Use this scroller to see how price and savings are related</p><br>
+        <h2>Individual: $<span id="individual"></span> USD/mo</h2>
+        <h2>Spouse: $<span id="spouse"></span> USD/mo</h2>
+        <h2>Family: $<span id="family"></span> USD/mo</h2>
+        <h2>Achieved up to <span id="savings"></span>% total claims savings</h2>
+      </div>
 
           <script>
           var slider = document.getElementById("myRange");
-          var equity = document.getElementById("equity");
-          var hourly = document.getElementById("hourly");
+          var individual = document.getElementById("individual");
+          var spouse = document.getElementById("spouse");
+          var family = document.getElementById("family");
+          var savings = document.getElementById("savings");
 
-          equity.innerHTML = "1.00";
-          hourly.innerHTML = 100;
+          individual.innerHTML = 59.99;
+          spouse.innerHTML = 119.99;
+          family.innerHTML = 179.99;
+          savings.innerHTML = 20;
 
           slider.oninput = function() {
-              hourly.innerHTML = slider.value;
-              equity.innerHTML = ((0 - slider.value)/100 + 2.0).toFixed(2)
+            individual.innerHTML = ((slider.value * 15) + 59.99).toFixed(2);
+            spouse.innerHTML = ((slider.value * 30) + 119.99).toFixed(2);
+            family.innerHTML = ((slider.value * 45) + 179.99).toFixed(2);
+            savings.innerHTML = slider.value * 10 + 20;
           }
           </script>
 
-        <table class="table is-fullwidth is-bordered" style="display: block; width: 100%;">
+    </div>
+        <!-- <table class="table is-fullwidth is-bordered" style="display: block; width: 100%;">
           <thead>
             <tr>
               <th><abbr title="Title"></abbr></th>
@@ -232,11 +208,39 @@
           </tbody>
         </table>
       </div>
-    </div>
+    </div> -->
     <!-- Main End -->
 
 
     <!-- How we can save you money -->
+    <div class="section">
+      <div class="container has-text-centered" style="padding-bottom: 3%;">
+        <h2>How We Save You Money</h2>
+        <p>Stop overpaying for healthcare inefficiencies, poor coordination, and waste. We built Hue Health from the ground up to tackle some of the biggest cost centers.</p>
+      </div>
+      <div class="container">
+        <nav class="level">
+          <div class="level-item has-text-centered">
+              <div>
+                  <p class="title">Quarterbacking Care</p> <br>               
+                  <p class="subtitle">Navigation to our partner network <br> of low-cost, high-quality <br> specialists & hospitals</p>
+              </div>
+          </div>
+          <div class="level-item has-text-centered">
+              <div>
+                  <p class="title">Centalized Coordination</p><br>
+                  <p class="subtitle">Your entire coordinated healthcare <br> journey in a single place </p>
+              </div>
+          </div>
+          <div class="level-item has-text-centered">
+              <div>
+                  <p class="title">Tech Administration</p><br>
+                  <p class="subtitle">Cutting the 30% of healthcare <br> costs related to billing & admin</p>
+              </div>
+          </div>
+      </nav>
+      </div>
+    </div>
 
 
     <!-- Action -->
