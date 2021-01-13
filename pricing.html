@@ -113,12 +113,12 @@
     <!-- Hero -->
     <div class="section">
       <div class="container has-text-centered" style="padding: 15% 0">
-        <h1>Stop Healthcare TurboCharging</h1>
+        <h1>Rein in Healthcare Costs</h1>
         <p>Healthcare facilities frequently charges 2,000% price upticks depending on your location and insurance plan. Stop overpaying through effective navigation and aligned incentives through Hue Health.</p>
       </div>
     </div>
 
-    
+    <!-- Description of Performance-Based -->
 
     <!-- Main 2 -->
     <div class="section has-background-light">
@@ -128,6 +128,70 @@
         <div class="line"></div>
       </div>
       <div class="container">
+
+          <style>
+          .div {
+              display: flex;
+          }
+          .slidecontainer {
+            width: 80%;
+            padding: 5% 10% 5% 10%; 
+          }
+
+          .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 25px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+          }
+
+          .slider:hover {
+            opacity: 1;
+          }
+
+          .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #0196b1;
+            cursor: pointer;
+          }
+
+          .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #0196b1;
+            cursor: pointer;
+          }
+          </style>
+          </head>
+          <body>
+
+          <div class="slidecontainer">    
+            <input type="range" min="0" max="200" value="100" class="slider" id="myRange">
+            <h2>Equity: <span id="equity"></span>%</h2>
+            <h2>Hourly: $<span id="hourly"></span>/hr</h2>
+          </div>
+
+          <script>
+          var slider = document.getElementById("myRange");
+          var equity = document.getElementById("equity");
+          var hourly = document.getElementById("hourly");
+
+          equity.innerHTML = "1.00";
+          hourly.innerHTML = 100;
+
+          slider.oninput = function() {
+              hourly.innerHTML = slider.value;
+              equity.innerHTML = ((0 - slider.value)/100 + 2.0).toFixed(2)
+          }
+          </script>
+
         <table class="table is-fullwidth is-bordered" style="display: block; width: 100%;">
           <thead>
             <tr>
@@ -170,6 +234,9 @@
       </div>
     </div>
     <!-- Main End -->
+
+
+    <!-- How we can save you money -->
 
 
     <!-- Action -->
